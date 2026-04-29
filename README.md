@@ -41,6 +41,8 @@ O **Mega Reservations** é um projeto backend desenvolvido para praticar conceit
 - Criar uma acomodação  
 - Listar todas as acomodações  
 - Buscar acomodação por ID  
+- Editar uma acomodação
+- Deletar uma acomodação
 
 ---
 
@@ -54,6 +56,12 @@ GET /properties
 
 ### 🔍 Buscar por ID
 GET /properties/:id
+
+### 🔄️ Editar uma propriedade
+PUT /properties/:id
+
+### 🗑️ Deletar uma propriedade
+DELETE /properties/:id
 
 ---
 
@@ -78,10 +86,10 @@ Crie um arquivo `.env` na raiz com:
 
 ## 📈 Próximos passos
 
-- [ ] Atualizar propriedades (PUT)
-- [ ] Deletar propriedades (DELETE)
-- [ ] Sistema de reservas completo
-- [ ] Autenticação de usuários
+- [X] Atualizar propriedades (PUT)
+- [X] Deletar propriedades (DELETE)
+- [X] Sistema de propriedades completo
+- [ ] CRUD de reservas
 - [ ] Integração com frontend
 
 ---
