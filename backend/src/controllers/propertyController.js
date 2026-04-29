@@ -92,4 +92,42 @@ const propertyById = async(req, res) => {
     }
 };
 
-module.exports = { newProperty, listProperties, propertyById }
+const deleteProperty = async(req, res) => {
+    try {
+        const { id } = req.params;
+
+        if (!mongoose.Types.ObjectId.isValid(id)) {
+            return res.status(400).json({
+                success: false,
+                message: "Invalid ID"
+            });
+        }
+
+        const property = await Property.findByIdAndDelete(id)
+
+        if (!property) {
+            return res.status(404).json({
+                success: false,
+                message: "Property not found"
+            });
+        };
+        
+        return res.status(200).json({
+            success: true,
+            message: "Property deleted successfully",
+            data: property
+        })
+            
+    } catch (error) {
+        return res.status(500).json({
+            success: false,
+            message: error.message
+        })
+    }
+};
+
+const updateProperty = async(req, res) => {
+
+}
+
+module.exports = { newProperty, listProperties, propertyById, deleteProperty }
