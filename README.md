@@ -6,7 +6,7 @@ API RESTful para gerenciamento de reservas e acomodações (hotéis, apartamento
 
 ## 🚀 Sobre o projeto
 
-O **Mega Reservations** é um projeto backend desenvolvido para praticar conceitos de desenvolvimento fullstack, com foco em:
+O **Mega Reservations** é um projeto fullstack desenvolvido para praticar conceitos de desenvolvimento fullstack, com foco em:
 
 - Arquitetura de APIs REST
 - CRUD completo
@@ -84,12 +84,17 @@ Crie um arquivo `.env` na raiz com:
 
 ---
 
-## 📈 Próximos passos
+## 📈 Últimos finalizados
 
 - [X] Atualizar propriedades (PUT)
 - [X] Deletar propriedades (DELETE)
 - [X] Sistema de propriedades completo
-- [ ] CRUD de reservas
+
+## 📈 Próximos passos
+
+- [ ] Iniciar CRUD de reservas
+- [ ] Reservar uma acomodação
+- [ ] Cancelar uma reserva
 - [ ] Integração com frontend
 
 ---
