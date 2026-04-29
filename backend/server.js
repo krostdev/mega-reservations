@@ -9,5 +9,5 @@ dns.setServers(["1.1.1.1", "1.0.0.1"]);
 require("./src/config/database.js");
 
 app.listen(PORT, () => {
-    console.log(`[SERVER] Servidor iniciado na porta ${PORT}.`)
+    console.log(`[SERVER] Server started on port ${PORT}.`)
 });
