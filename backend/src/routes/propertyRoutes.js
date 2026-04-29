@@ -3,10 +3,10 @@ const router = express.Router();
 
 const propertyController = require("../controllers/propertyController.js");
 
-router.post("/", propertyController.newProperty);
-router.get("/", propertyController.listProperties);
-router.get("/:id", propertyController.propertyById);
-router.delete("/:id", propertyController.deleteProperty);
-router.put("/:id", propertyController.updateProperty);
+router.post("/", propertyController.newProperty); // Create
+router.get("/", propertyController.listProperties); // Get
+router.get("/:id", propertyController.propertyById); // Get By ID
+router.delete("/:id", propertyController.deleteProperty); // Delete
+router.put("/:id", propertyController.updateProperty);// Update
 
 module.exports = router;

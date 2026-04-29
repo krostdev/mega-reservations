@@ -1,6 +1,7 @@
 const Property = require("../models/Property.js");
 const mongoose = require("mongoose");
 
+// Create property
 const newProperty = async(req, res) => {
     const { name, type, address, description, amenities, isActive } = req.body;
 
@@ -35,6 +36,7 @@ const newProperty = async(req, res) => {
     };
 };
 
+// List properties
 const listProperties = async(req, res) => {
     try {
         const properties = await Property.find();
@@ -52,6 +54,7 @@ const listProperties = async(req, res) => {
     };
 };
 
+// Get property by ID
 const propertyById = async(req, res) => {
     try {
         const { id } = req.params;
@@ -85,6 +88,7 @@ const propertyById = async(req, res) => {
     }
 };
 
+// Delete property
 const deleteProperty = async(req, res) => {
     try {
         const { id } = req.params;
@@ -119,6 +123,7 @@ const deleteProperty = async(req, res) => {
     }
 };
 
+// Update property
 const updateProperty = async(req, res) => {
     try {
         const { id } = req.params;
