@@ -21,6 +21,9 @@ O **Mega Reservations** é um projeto fullstack desenvolvido para praticar conce
 - Express  
 - MongoDB  
 - Mongoose  
+- JWT
+- Cookie Parser
+- Bcrypt
 
 ---
 
@@ -28,6 +31,7 @@ O **Mega Reservations** é um projeto fullstack desenvolvido para praticar conce
 
     src/
       controllers/
+      middlewares/
       models/
       routes/
       config/

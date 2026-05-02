@@ -3,6 +3,4 @@ const router = express.Router();
 
 const reservaController = require("../controllers/reservaController.js");
 
-router.get("/", reservaController.helloWorld)
-
 module.exports = router;

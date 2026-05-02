@@ -1,6 +1,12 @@
 const mongoose = require("mongoose");
 
 const propertySchema = new mongoose.Schema({
+    host: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User",
+        required: true
+    },
+
     name: {
         type: String,
         required: true
