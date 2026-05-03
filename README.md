@@ -12,6 +12,8 @@ O **Mega Reservations** é um projeto fullstack desenvolvido para praticar conce
 - CRUD completo
 - Organização em camadas (routes, controllers, models)
 - Integração com banco de dados NoSQL
+- Autenticação com JWT
+- Cookies HTTP Only
 
 ---
 
@@ -21,20 +23,22 @@ O **Mega Reservations** é um projeto fullstack desenvolvido para praticar conce
 - Express  
 - MongoDB  
 - Mongoose  
-- JWT
-- Cookie Parser
-- Bcrypt
+- JWT  
+- Cookie Parser  
+- Bcrypt  
 
 ---
 
 ## 📁 Estrutura do projeto
 
-    src/
-      controllers/
-      middlewares/
-      models/
-      routes/
-      config/
+```txt
+src/
+  controllers/
+  middlewares/
+  models/
+  routes/
+  config/
+```
 
 ---
 
@@ -45,37 +49,84 @@ O **Mega Reservations** é um projeto fullstack desenvolvido para praticar conce
 - Criar uma acomodação  
 - Listar todas as acomodações  
 - Buscar acomodação por ID  
-- Editar uma acomodação
-- Deletar uma acomodação
+- Editar uma acomodação  
+- Deletar uma acomodação  
+
+### 👤 Users (Usuários)
+
+- Criar conta  
+- Fazer login  
+- Fazer logout  
+- Buscar usuário autenticado  
+- Autenticação com JWT  
+- Cookies HTTP Only  
 
 ---
 
 ## 🔗 Endpoints
 
+# 🏠 Properties
+
 ### ➕ Criar propriedade
+```http
 POST /properties
+```
 
 ### 📄 Listar propriedades
+```http
 GET /properties
+```
 
 ### 🔍 Buscar por ID
+```http
 GET /properties/:id
+```
 
-### 🔄️ Editar uma propriedade
+### 🔄 Editar uma propriedade
+```http
 PUT /properties/:id
+```
 
 ### 🗑️ Deletar uma propriedade
+```http
 DELETE /properties/:id
+```
+
+---
+
+# 👤 Users
+
+### ➕ Criar usuário
+```http
+POST /users/signin
+```
+
+### 🔐 Login
+```http
+POST /users/login
+```
+
+### 🚪 Logout
+```http
+POST /users/logout
+```
+
+### 👤 Usuário autenticado
+```http
+GET /users/me
+```
 
 ---
 
 ## ▶️ Como rodar o projeto
 
-    # instalar dependências
-    npm install
+```bash
+# instalar dependências
+npm install
 
-    # rodar o servidor
-    npm start
+# rodar o servidor
+npm start
+```
 
 ---
 
@@ -83,16 +134,21 @@ DELETE /properties/:id
 
 Crie um arquivo `.env` na raiz com:
 
-    MONGO_URI=your_mongodb_connection_string
-    PORT=3000
+```env
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
+PORT=3000
+```
 
 ---
 
 ## 📈 Últimos finalizados
-
-- [X] Atualizar propriedades (PUT)
-- [X] Deletar propriedades (DELETE)
 - [X] Sistema de propriedades completo
+- [X] Sistema de autenticação com JWT
+- [X] Cookies HTTP Only
+- [X] Rotas protegidas
+
+---
 
 ## 📈 Próximos passos
 

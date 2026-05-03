@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use("/properties", propertyRoutes);
-app.use("/user", userRoutes);
+app.use("/users", userRoutes);
 
 app.get("/", (req, res) => {
     res.send("Mega Reservations API is running 🚀");
