@@ -1,4 +1,6 @@
 const User = require("../models/User.js");
+const Reservation = require("../models/Reservations.js");
+
 const bcrypt = require("bcrypt");
 const validator = require("validator");
 const jwt = require("jsonwebtoken");
@@ -149,10 +151,14 @@ const logoutUser = async (req, res) => {
 const getUser = async (req, res) => {
     try {
         const user = await User.findOne({ _id: req.user.id }).select("-password");
+        const reservations = await Reservation.find({ user: req.user.id }).populate("property");
 
         res.status(200).json({
             success: true,
-            data: user
+            data: {
+                user,
+                reservations
+            }
         })
     } catch (error) {
         return res.status(500).json({

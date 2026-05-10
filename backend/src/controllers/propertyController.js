@@ -21,7 +21,7 @@ const newProperty = async(req, res) => {
 
     try {
         const property = await Property.create({
-            name, type, address, description, amenities, isActive
+            host: req.user.id, name, type, address, description, amenities, isActive
         });
 
         return res.status(201).json({
